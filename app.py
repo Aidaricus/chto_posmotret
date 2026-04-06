@@ -44,18 +44,18 @@ st.set_page_config(page_title="Поиск фильмов по описанию",
 st.title("🍿 Поиск фильмов по запросу")
 st.markdown("Введите запрос на русском (например, *фильм про космос* или *хочу романтическую комедию*)")
 
-query = st.text_input("Ваш запрос:", placeholder="например: фильм про любовь и путешествия")
+# query = st.text_input("Ваш запрос:", placeholder="например: фильм про любовь и путешествия")
 
-if query:
-    with st.spinner("Ищем фильмы..."):
-        model = load_model()
-        descriptions, titles, embeddings = load_corpus()
-        results = search(query, model, embeddings, descriptions, titles, top_k=5)
+# if query:
+#     with st.spinner("Ищем фильмы..."):
+#         model = load_model()
+#         descriptions, titles, embeddings = load_corpus()
+#         results = search(query, model, embeddings, descriptions, titles, top_k=5)
     
-    st.subheader("🎬 Топ-5 релевантных фильмов:")
-    for i, res in enumerate(results, 1):
-        st.markdown(f"**{i}. {res['title']}**  \n*Схожесть: {res['score']:.2f}*")
-        # Обрезаем описание до 300 символов
-        short_desc = res['description'][:300] + "..." if len(res['description']) > 300 else res['description']
-        st.markdown(f"{short_desc}")
-        st.markdown("---")
+#     st.subheader("🎬 Топ-5 релевантных фильмов:")
+#     for i, res in enumerate(results, 1):
+#         st.markdown(f"**{i}. {res['title']}**  \n*Схожесть: {res['score']:.2f}*")
+#         # Обрезаем описание до 300 символов
+#         short_desc = res['description'][:300] + "..." if len(res['description']) > 300 else res['description']
+#         st.markdown(f"{short_desc}")
+#         st.markdown("---")
