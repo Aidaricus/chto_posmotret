@@ -2,5 +2,5 @@ streamlit
 sentence-transformers
 numpy
 scikit-learn
-pickle-mixin
-# torchvision
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
