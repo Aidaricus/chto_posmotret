@@ -1,4 +1,5 @@
 import sys
+import os
 print("Python path:", sys.path)
 print("Current directory files:", os.listdir("."))
 print("Model folder exists:", os.path.exists("./fine_tuned_movie_search"))
