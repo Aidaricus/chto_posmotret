@@ -1,3 +1,9 @@
+import sys
+print("Python path:", sys.path)
+print("Current directory files:", os.listdir("."))
+print("Model folder exists:", os.path.exists("./fine_tuned_movie_search"))
+print("Corpus files exist:", os.path.exists("corpus_embeddings.npy"))
+
 # app.py
 import streamlit as st
 import numpy as np
